@@ -1,0 +1,12 @@
+<html>
+    <head>
+        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    </head>
+    <body>
+        <h1>Ex1_Hello_Alpine</h1>
+        <div x-data="{ message : 'Nothing to say'}">
+            <label x-text="message"></label></br>
+            <button x-on:click="message = 'Hello World, Alpine.js!'">Click me</button>
+        </div>
+    </body>
+</html>
