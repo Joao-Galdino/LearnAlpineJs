@@ -1,0 +1,12 @@
+<html>
+    <head>
+        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    </head>
+    <body>
+        <h1>Ex3 Toggle Visibility</h1>
+        <div x-data="{ isVisible: true }">
+            <p x-show="isVisible">This is visible</p>
+            <button x-on:click="isVisible = !isVisible">Toggle Sisible</button>
+        </div>
+    </body>
+</html>
