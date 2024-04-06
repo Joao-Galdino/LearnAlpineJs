@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    </head>
+    <body>
+        <h1>Ex5 Simple Tab System</h1>
+        <div x-data="{ tab: 'tab1' }">
+            <button x-on:click="tab = 'tab1'">Tab 1</button>
+            <button x-on:click="tab = 'tab2'">Tab 2</button>
+            <button x-on:click="tab = 'tab3'">Tab 3</button>
+            <div x-show="tab === 'tab1'">Tab 1 content</div>
+            <div x-show="tab === 'tab2'">Tab 2 content</div>
+            <div x-show="tab === 'tab3'">Tab 3 content</div>
+    </body>
+</html>
