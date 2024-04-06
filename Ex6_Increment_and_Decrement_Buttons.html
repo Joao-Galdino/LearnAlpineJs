@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    </head>
+    <body>
+        <h1>Ex6 Increment and Decrement Buttons</h1>
+        <div x-data="{ count : 0 }">
+            <label x-text="count"></label>            
+            <button x-on:click="count++">Increment</button>
+            <button x-on:click="count--">Decrement</button>
+        </div>
+    </body>
+</html>
