@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    </head>
+    <body>
+        <style>
+            .hidden {
+                display: none;
+            }
+        </style>
+        <h1>Ex7 Dynamic CSS Classes</h1>
+        <b>Objective:</b> Toggle a CSS class on an element when a button is clicked.
+        <p> 
+            <b>Instructions:</b>
+            <ol>
+                <li>Use x-data to initialize a component with a boolean property.</li>
+                <li>Use x-bind:class (or :class for shorthand) to add a specific CSS class to an element based on the boolean property's value.</li>
+                <li>Implement a button that toggles the boolean property when clicked.</li>
+            </ol>
+        </p>
+        <div x-data="{ cssOn : false }">
+            <button x-on:click="cssOn = !cssOn">Toggle Css</button>
+            <div :class="cssOn ? '' : 'hidden'">
+                <iframe src="https://giphy.com/embed/wCCqN44IBS7Y2wvZqK" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+            </div>
+        </div>
+    </body>
+</html>
