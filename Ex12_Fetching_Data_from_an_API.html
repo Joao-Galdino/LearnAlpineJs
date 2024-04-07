@@ -30,7 +30,7 @@
             }">
             <button x-on:click="fetchData()">Random Pokemon</button>
             <div>
-                <h2 x-text="num, data"></h2>
+                <h2 x-text="`#${num} ${data}`"></h2>
                 <h3 x-text="'Ability: ' + ability"></h3>
                 <img x-bind:src="imageUrl" alt="Pokemon Image" /></br>
             </div>
