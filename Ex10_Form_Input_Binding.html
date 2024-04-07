@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    </head>
+    <body>
+        <h1>Ex10 Form Input Binding</h1>
+        <b>Objective:</b> Bind multiple inputs to an object.
+        <p> 
+            <b>Instructions:</b>
+            <ol>
+                <li>Initialize a component with an object containing properties for each form input.</li>
+                <li>Use x-model to bind each input to its corresponding property in the object.</li>
+            </ol>
+        </p>
+        <div x-data="{ form: { name: '', email: '', message: '' } }">
+            <form>
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" x-model="form.name"><br><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" x-model="form.email"><br><br>
+                <label for="message">Message:</label><br>
+                <textarea id="message" x-model="form.message"></textarea><br><br>
+                <button type="submit">Submit</button>
+            </form>
+            <div>
+                <h2>Form Data:</h2>
+                <p><b>Name:</b> <span x-text="form.name"></span></p>
+                <p><b>Email:</b> <span x-text="form.email"></span></p>
+                <p><b>Message:</b> <span x-text="form.message"></span></p>
+            </div>
+    </body>
+</html>
