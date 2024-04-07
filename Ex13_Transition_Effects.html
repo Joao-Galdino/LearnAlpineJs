@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    </head>
+    <body>
+        <h1>Ex13 Transition Effects</h1>
+        <b>Objective:</b> Apply a fade transition to an element when it is added or removed from the DOM.
+        <p> 
+            <b>Instructions:</b>
+            <ol>
+                <li>Use x-data to control the visibility of an element.</li>
+                <li>Use x-show to toggle the element's visibility.</li>
+                <li>Apply x-transition directives to add fade-in and fade-out effects.</li>
+            </ol>
+        </p>
+        <div x-data="{ visibility : false}">
+            <button @click="visibility = ! visibility">Toggle</button>
+            <span x-show="visibility" x-transition>
+                Olá, to aqui!
+            </span>
+        </div>
+
+
+    </body>
+</html>
