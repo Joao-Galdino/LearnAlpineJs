@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    </head>
+    <body>
+        <h1>Ex8 Mouse Hover Interaction</h1>
+        <b>Objective:</b> Change the text of an element when the mouse hovers over it.
+        <p> 
+            <b>Instructions:</b>
+            <ol>
+                <li>Initialize a component with a default text property.</li>
+                <li>Use x-on:mouseenter to change the text when the mouse hovers over the element.</li>
+                <li>Reset the text to its original state with x-on:mouseleave.</li>
+            </ol>
+        </p>
+        <div x-data="{ text: 'Initial Text: Hover over me!' }">
+            <p x-text="text" x-on:mouseenter="text = 'Mouse entered!'" x-on:mouseleave="text = 'Hover over me!'"></p>	
+        </div>
+    </body>
+</html>
