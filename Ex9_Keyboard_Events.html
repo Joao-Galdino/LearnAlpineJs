@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    </head>
+    <body>
+        <h1>Ex9 Keyboard Events</h1>
+        <b>Objective:</b> Increment a counter when the spacebar is pressed.
+        <p> 
+            <b>Instructions:</b>
+            <ol>
+                <li>Set up a component with a counter property.</li>
+                <li>Use x-on:keydown.space to listen for the spacebar key press and increment the counter.</li>
+            </ol>
+        </p>
+
+        <div x-data="{ count : 0 }" x-on:keydown.space.window="count++" tabindex="0">
+            <label x-text="count" ></label>            
+        </div>
+    </body>
+    <script>
+        // Foco automático na div ao carregar a página para imediatamente capturar eventos de teclado
+        window.onload = function() {
+            document.querySelector('[x-data]').focus();
+        };
+    </script>
+</html>
