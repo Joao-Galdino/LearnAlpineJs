@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    </head>
+    <body>
+        <h1>Ex11 Looping Over Arrays</h1>
+        <b>Objective:</b> Display a list of items with a button to remove each item.
+        <p> 
+            <b>Instructions:</b>
+            <ol>
+                <li>Initialize a component with an array of items.</li>
+                <li>Use x-for to display each item in a list.</li>
+                <li>Next to each item, add a button that removes the item from the array.</li>
+            </ol>
+        </p>
+        <div x-data='{data : [  {"nome": "Pelé", "clube": "Santos", "gols": 1091},
+                                {"nome": "Roberto Dinamite", "clube": "Vasco", "gols": 702},
+                                {"nome": "Zico", "clube": "Flamengo", "gols": 508},
+                                {"nome": "Carlitos", "clube": "Internacional", "gols": 485},
+                                {"nome": "Waldo", "clube": "Fluminense", "gols": 319},
+                                {"nome": "Quarentinha", "clube": "Botafogo", "gols": 308},
+                                {"nome": "Cláudio", "clube": "Corinthians", "gols": 305},
+                                {"nome": "Luizinho Lemos", "clube": "América-RJ", "gols": 311},
+                                {"nome": "Alcindo", "clube": "Grêmio", "gols": 264},
+                                {"nome": "Reinaldo", "clube": "Atlético-MG", "gols": 255}] }'>
+            <div x-show="data.length > 0">
+                <ul>
+                    <template x-for="item in data" :key="item.nome">
+                        <li>
+                            <span x-text="item.nome"></span>
+                            <span x-text="item.clube"></span>
+                            <span x-text="item.gols"></span>
+                            <button x-on:click="data = data.filter(i => i !== item)">Remove Item</button>
+                        </li>
+                    </template>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>
